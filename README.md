@@ -20,3 +20,21 @@ Your xml file must contain the following elements: Title, Picture (use URL to li
 Your python program should save your xml data to fav_movies.xml. 
 Use an XML validation tool to verify your xml file.
 If there are errors, fix and test until no errors remain.
+
+3b. In a separate python program, retrieve the values from your xml file.
+Use a foreach statement to loop through the retrieved xml and display on a web page within a HTML table. 
+Each cell will show the picture, title and year (as H1 element), followed by the director, main actor/actress, and genre. 
+After every 3 entries displayed, start a new row.
+Cell Format Example:
+PICTURE
+TITLE (YEAR)
+Director: .....
+Main Actor/Actress: .....
+Genre: ....
+HINT:
+Research parse xml and python 3.
+One of the easier approaches uses ElementTree to scan through each item and then through each child element
+ex.
+import xml.etree.ElementTree as etree;
+tree = etree.parse('myfile.xml');
+root = tree.getroot( );
